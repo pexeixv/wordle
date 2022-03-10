@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "tw": "tailwindcss -i src/css/tailwind.css -o src/css/style.css",
+    "tww": "tailwindcss -i src/css/tailwind.css -o src/css/style.css -w",
+    "twm": "tailwindcss -i src/css/tailwind.css -o src/css/style.css -m"
+  }
+}

@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: Wordle by Gavin Pereira
+---
+
+
+
+<section class="min-h-screen bg-slate-900 text-white flex flex-col">
+    <header class="flex flex-col items-center  border-b-slate-700 py-5">
+        <h1 class="text-4xl font-black">
+            Wordle Clone
+        </h1>
+        <h2 class="mt-2">
+            <span>By</span>
+            <a href="//gavinpereira.in" target="_blank" class="underline">Gavin Pereira</a>
+        </h2>
+    </header>
+    <main class="flex-1 flex items-center justify-center">
+        <div class="flex gap-2 flex-col">
+
+            {% for i in range(0,6) %}
+                <div class="wordRow flex gap-2">
+                    {% for j in range(0,5) %}
+                        <span class="wordLetter flex border-2 border-slate-400 items-center justify-center h-12 w-12 "></span>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+        </div>
+    </main>
+    <div class="correct-text opacity-0 text-center uppercase">
+        Correct!
+    </div>
+    <footer class="flex flex-col items-center py-5">
+        <div class=" flex gap-2">
+            {% for i in letters.row1 %}
+                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+            {% endfor %}
+        </div>
+        <div class="mt-5 flex gap-2">
+            {% for i in letters.row2 %}
+                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+            {% endfor %}
+        </div>
+        <div class="mt-5 flex gap-2">
+            <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="enterLetter()">ENTER</span>
+            {% for i in letters.row3 %}
+                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+            {% endfor %}
+            <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clearLetter()">CLEAR</span>
+        </div>
+    </footer>
+</section>
+
+
+
+<script src="/script.js"></script>
