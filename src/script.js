@@ -9,7 +9,6 @@ const words = ["cigar", "rebut", "sissy", "humph", "awake", "blush", "focal", "e
 
 const randomIndex = Math.floor(Math.random() * words.length)
 const word = words[randomIndex].toUpperCase()
-console.log(word)
 
 
 let currentLetter = 0
