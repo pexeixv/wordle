@@ -47,14 +47,17 @@ const enterLetter = () => {
             _word = _word.replace(letter, '%')
             key.classList.add('bg-green-200')
             key.classList.add('text-black')
-        }
-        else if (_word.includes(letter)) {
-            wordLetters[i].classList.add('bg-yellow-200')
-            wordLetters[i].classList.add('text-black')
+        } else if (_word.includes(letter)) {
+            if (!key.classList.contains('bg-green-200')) {
+                wordLetters[i].classList.add('bg-yellow-200')
+                wordLetters[i].classList.add('text-black')
+            }
             _word = _word.replace(letter, '%')
             if (!key.classList.contains('bg-green-200'))
                 key.classList.add('bg-yellow-200')
             key.classList.add('text-black')
+        } else if (!(key.classList.contains('bg-green-200') && key.classList.contains('bg-yellow-200'))) {
+            key.classList.add('bg-slate-600')
         }
     }
     if (currentLetter === 30) {
