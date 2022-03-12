@@ -32,20 +32,20 @@ title: Wordle by Gavin Pereira
     <footer class="flex flex-col items-center py-5">
         <div class=" flex gap-2">
             {% for i in letters.row1 %}
-                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+                <span class="cursor-pointer text-sm lg:text-base px-2 md:px-3 lg:px-4 py-2 lg:py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
             {% endfor %}
         </div>
         <div class="mt-5 flex gap-2">
             {% for i in letters.row2 %}
-                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+                <span class="cursor-pointer text-sm lg:text-base px-2 md:px-3 lg:px-4 py-2 lg:py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
             {% endfor %}
         </div>
         <div class="mt-5 flex gap-2">
-            <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="enterLetter()">ENTER</span>
+            <span class="cursor-pointer text-sm lg:text-base px-2 md:px-3 lg:px-4 py-2 lg:py-4 bg-slate-800 rounded" onclick="enterLetter()">ENTER</span>
             {% for i in letters.row3 %}
-                <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
+                <span class="cursor-pointer text-sm lg:text-base px-2 md:px-3 lg:px-4 py-2 lg:py-4 bg-slate-800 rounded" onclick="clickLetter('{{ i }}')" data-letter="{{i}}">{{ i }}</span>
             {% endfor %}
-            <span class="cursor-pointer px-4 py-4 bg-slate-800 rounded" onclick="clearLetter()">CLEAR</span>
+            <span class="cursor-pointer text-sm lg:text-base px-2 md:px-3 lg:px-4 py-2 lg:py-4 bg-slate-800 rounded" onclick="clearLetter()">CLEAR</span>
         </div>
     </footer>
 </section>
