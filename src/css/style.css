@@ -638,6 +638,18 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: underline;
 }
 
+.opacity-\[0\.7\] {
+  opacity: 0.7;
+}
+
+.opacity-\[0\.2\] {
+  opacity: 0.2;
+}
+
+.opacity-\[0\.4\] {
+  opacity: 0.4;
+}
+
 *::-moz-selection{
   background: transparent;
 }
